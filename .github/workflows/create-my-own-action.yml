@@ -36,5 +36,5 @@ jobs:
           echo test, and deploy your project.
       - uses: rodrigociro/create-my-own-action@main
         with:
-          who-to-greet: 'action-from-create-my-own-action'
+          who-to-greet: 'repository: rodrigociro/action-from-create-my-own-action'
         
