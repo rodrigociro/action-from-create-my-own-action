@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: use create-my-own-action from another repo
+name: test-action.yml
 
 # Controls when the workflow will run
 on:
