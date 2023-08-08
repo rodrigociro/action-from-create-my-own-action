@@ -14,3 +14,9 @@ https://github.com/rodrigociro/create-multiple-actions.git
 
 ![image](https://github.com/rodrigociro/action-tester/assets/23638418/436ca62f-3212-469b-a903-764dede5e1e4)
 
+# artifacts.yml
+[![artifacts](https://github.com/rodrigociro/action-tester/actions/workflows/artifacts.yml/badge.svg)](https://github.com/rodrigociro/action-tester/actions/workflows/artifacts.yml)
+- this repository will upload & download an "artefact".
+- jobs in parallel
+
+![image](https://github.com/rodrigociro/action-tester/assets/23638418/5779cd04-d427-4be1-98cb-ea6e1a030513)
