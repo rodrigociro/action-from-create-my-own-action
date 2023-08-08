@@ -34,5 +34,5 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - uses: actions/create-my-own-action@main
+      - uses: rodrigociro/create-my-own-action@main
         
