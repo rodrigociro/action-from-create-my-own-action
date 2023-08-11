@@ -1,0 +1,50 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI-4-jobs
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+jobs:
+  construir-artefacto:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: multi-line script
+        run: |
+          echo compilar/construir README.md
+          cat README.md
+      - uses: actions/upload-artifact@v3
+        with:
+          name: mi-artefacto
+          path: README.md   
+  descargar-artefacto:
+    needs: ['construir-artefacto']
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: mi-artefacto
+      - run: ls -ltr
+  trabajo-en-paralelo:
+    needs: ['construir-artefacto']
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: mi-artefacto
+      - run: |
+          pwd
+          date
+  trabajo-despues-paralelos:
+    needs: ['trabajo-en-paralelo']
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/download-artifact@v3
+        with:
+          name: mi-artefacto
+      - run: pwd    
+    
