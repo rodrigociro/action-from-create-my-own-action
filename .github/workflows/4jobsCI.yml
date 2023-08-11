@@ -40,7 +40,7 @@ jobs:
           pwd
           date
   trabajo-despues-paralelos:
-    needs: ['trabajo-en-paralelo']
+    needs: ['trabajo-en-paralelo','construir-artefacto']
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/download-artifact@v3
