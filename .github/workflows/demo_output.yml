@@ -1,0 +1,17 @@
+name: GET GITHUB URL
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          echo $var
+        env:
+          var: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
