@@ -1,0 +1,24 @@
+name: DMP API
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  gitOpsReporter:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: rodrigociro/tsc-init@dmp-api
+      with:
+        method: "POST"
+        runner: ubuntu-latest
+        dmpAppId: "423343234fsdfsdfd"
+        appVersion: 0.29.0-SNAPSHOPT
+        gitRepository: maven-repository-test
+        commitId: ${{ github.sha }}
+        appGitBranch: "development"
+        gitHubActionsBuildUrl: "https://github.com/rodrigociro/scg-itos-runner-test/actions/"
+        artifactNexusUrl: "https://github.com/rodrigociro/scg-itos-runner-test/actions/"
+        success: true
