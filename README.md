@@ -33,7 +33,7 @@ https://github.com/rodrigociro/create-multiple-actions.git
 
 - YAML when isRelease is equals FALSE
 
-´´´
+```
 name: Controlm-Master branch
 on:
   push:
@@ -48,14 +48,16 @@ jobs:
       runner: 'ubuntu-latest'
       isRelease: 'false'
     secrets: inherit
-´´´
+```
+
 
 ![image](https://github.com/rodrigociro/action-tester/assets/23638418/812f82b6-4acd-4680-ae39-f892ed6e0acd)
 
 
+
 - YAML when isRelease is equals TRUE
 
-´´´
+```
 name: Controlm-Master branch
 on:
   push:
@@ -70,7 +72,8 @@ jobs:
       runner: 'ubuntu-latest'
       isRelease: 'true'
     secrets: inherit
-´´´
+```
+
 
 ![image](https://github.com/rodrigociro/action-tester/assets/23638418/832acbbd-9ba9-43f4-a321-f24eb633191c)
 
