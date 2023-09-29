@@ -10,9 +10,8 @@ on:
 jobs:
   Controlm-Master:
     runs-on: ubuntu-latest
-    steps:
-      - uses: rodrigociro/tsc-init/.github/workflows/control-m.yml@workflows
-        with: 
-          runner: ubuntu-latest
-          isRelease: 'true'
+    uses: rodrigociro/tsc-init/.github/workflows/control-m.yml@workflows
+      with: 
+        runner: ubuntu-latest
+        isRelease: 'true'
     
