@@ -11,7 +11,7 @@ jobs:
     uses: rodrigociro/tsc-init/.github/workflows/control-m.yml@workflows
     with:
       runner: 'ubuntu-latest'
-      isRelease: 'false'
+      isRelease: 'true'
     secrets: inherit
 
 
