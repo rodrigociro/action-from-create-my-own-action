@@ -11,7 +11,8 @@ jobs:
   Controlm-Master:
     runs-on: ubuntu-latest
     uses: rodrigociro/tsc-init/.github/workflows/control-m.yml@workflows
-      with: 
-        runner: ubuntu-latest
-        isRelease: 'true'
-    
+    with: 
+      runner: ubuntu-latest
+      isRelease: 'true'
+
+
