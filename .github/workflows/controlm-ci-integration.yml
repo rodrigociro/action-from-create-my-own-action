@@ -6,13 +6,12 @@ on:
   pull_request:
     branches: [ "development-controlm" ]
 
-  workflow_dispatch:
 jobs:
-  Controlm-Master:
-    runs-on: ubuntu-latest
+  call-controlm-master:
     uses: rodrigociro/tsc-init/.github/workflows/control-m.yml@workflows
-    with: 
-      runner: ubuntu-latest
+    with:
+      runner: 'ubuntu-latest'
       isRelease: 'true'
+    secrets: inherit
 
 
