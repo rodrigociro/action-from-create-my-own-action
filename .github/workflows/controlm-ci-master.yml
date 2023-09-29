@@ -1,0 +1,17 @@
+# This is a basic workflow to help you get started with Actions
+name: Controlm-Master branch
+on:
+  push:
+    branches: [ "main-controlm" ]
+  pull_request:
+    branches: [ "main-controlm" ]
+
+  workflow_dispatch:
+jobs:
+  Controlm-Master:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: rodrigociro/tsc-init@workflows
+        with: 
+          runner: ubuntu-latest
+    
