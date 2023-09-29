@@ -11,7 +11,7 @@ jobs:
   Controlm-Master:
     runs-on: ubuntu-latest
     steps:
-      - uses: rodrigociro/tsc-init/controlm@workflows
+      - uses: rodrigociro/tsc-init/.github/workflows/control-m-master@workflows
         with: 
           runner: ubuntu-latest
     
