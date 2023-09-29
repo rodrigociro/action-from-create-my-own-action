@@ -7,11 +7,8 @@ on:
     branches: [ "main-controlm" ]
 
   workflow_dispatch:
-jobs:
-  Controlm-Master:
-    runs-on: ubuntu-latest
-    uses: rodrigociro/tsc-init/.github/workflows/control-m-master.yml@workflows
-    with: 
-      runner: ubuntu-latest
-      isRelease: 'true'
+uses: rodrigociro/tsc-init/.github/workflows/control-m-master.yml@workflows
+with: 
+  runner: ubuntu-latest
+  isRelease: 'true'
     
