@@ -26,3 +26,53 @@ https://github.com/rodrigociro/create-multiple-actions.git
 - this repository execute 4 jobs.
 
 ![image](https://github.com/rodrigociro/action-tester/assets/23638418/031636d9-e7c7-40a9-a9c7-71767c51363f)
+
+
+
+# DEVELOPMENT BRANCH TO MASTER BRANCH, VALIDATE CHECK "IS RELEASE"
+
+- YAML when isRelease is equals FALSE
+
+´´´
+name: Controlm-Master branch
+on:
+  push:
+    branches: [ "development-controlm" ]
+  pull_request:
+    branches: [ "development-controlm" ]
+
+jobs:
+  call-controlm-master:
+    uses: rodrigociro/tsc-init/.github/workflows/control-m.yml@workflows
+    with:
+      runner: 'ubuntu-latest'
+      isRelease: 'false'
+    secrets: inherit
+´´´
+
+![image](https://github.com/rodrigociro/action-tester/assets/23638418/812f82b6-4acd-4680-ae39-f892ed6e0acd)
+
+
+- YAML when isRelease is equals TRUE
+
+´´´
+name: Controlm-Master branch
+on:
+  push:
+    branches: [ "development-controlm" ]
+  pull_request:
+    branches: [ "development-controlm" ]
+
+jobs:
+  call-controlm-master:
+    uses: rodrigociro/tsc-init/.github/workflows/control-m.yml@workflows
+    with:
+      runner: 'ubuntu-latest'
+      isRelease: 'true'
+    secrets: inherit
+´´´
+
+![image](https://github.com/rodrigociro/action-tester/assets/23638418/832acbbd-9ba9-43f4-a321-f24eb633191c)
+
+
+
