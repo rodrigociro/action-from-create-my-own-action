@@ -7,7 +7,7 @@ on:
     branches: [ "development-controlm" ]
 
 jobs:
-  call-controlm-master:
+  controlm-integration-branch:
     uses: rodrigociro/tsc-init/.github/workflows/control-m.yml@workflows
     with:
       runner: 'ubuntu-latest'

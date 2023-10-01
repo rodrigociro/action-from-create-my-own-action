@@ -7,7 +7,7 @@ on:
     branches: [ "main-controlm" ]
 
 jobs:
-  call-controlm-master:
+  controlm-master-branch:
     uses: rodrigociro/tsc-init/.github/workflows/control-m-master.yml@workflows
     with:
       runner: 'ubuntu-latest'
