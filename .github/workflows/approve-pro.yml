@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.PAT_RODRIGO }}      
+          token: ${{ secrets.PAT_WORKFLOWS }}      
       - name: Get environment id
         uses: actions/github-script@v6
         id: environment-id
@@ -31,9 +31,9 @@ jobs:
       - name: Approve workflow
         uses: actions/github-script@v6
         env:
-          GH_TOKEN: ${{ secrets.PAT_RODRIGO }}
+          GH_TOKEN: ${{ secrets.PAT_WORKFLOWS }}
         with:
-          github-token: ${{ secrets.PAT_RODRIGO }}
+          github-token: ${{ secrets.PAT_WORKFLOWS }}
           script: |
             await github.rest.actions.reviewPendingDeploymentsForRun({
               owner: context.repo.owner,
