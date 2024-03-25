@@ -11,7 +11,6 @@ jobs:
     uses: rodrigociro/tsc-init/.github/workflows/repo-manager.yml@workflows
     with:
       runner: 'ubuntu-latest'
-      isRelease: 'true'
     secrets: inherit
 
 
