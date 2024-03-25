@@ -1,0 +1,17 @@
+# This is a basic workflow to help you get started with Actions
+name: repo manager call
+on:
+  push:
+    branches: [ "manager-repo" ]
+  pull_request:
+    branches: [ "manager-repo" ]
+
+jobs:
+  manager-repository:
+    uses: rodrigociro/tsc-init/.github/workflows/repo-manager.yml@workflows
+    with:
+      runner: 'ubuntu-latest'
+      isRelease: 'true'
+    secrets: inherit
+
+
